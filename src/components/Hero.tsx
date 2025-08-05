@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/enhanced-button";
 import { Hammer, Award, Clock } from "lucide-react";
 import { Link } from "react-router-dom";
-import heroImage from "@/assets/hero-image.jpg";
+import heroImage from "@/assets/hero-image.png";
 
 const Hero = () => {
   return (
