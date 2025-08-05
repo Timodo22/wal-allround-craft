@@ -1,4 +1,5 @@
 import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Linkedin } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -13,11 +14,11 @@ const Footer = () => {
   ];
 
   const quickLinks = [
-    { name: "Home", href: "#home" },
-    { name: "Over Dean", href: "#about" },
-    { name: "Diensten", href: "#services" },
-    { name: "Projecten", href: "#projects" },
-    { name: "Contact", href: "#contact" }
+    { name: "Home", href: "/" },
+    { name: "Over Dean", href: "/about" },
+    { name: "Diensten", href: "/services" },
+    { name: "Projecten", href: "/projects" },
+    { name: "Contact", href: "/contact" }
   ];
 
   return (
@@ -73,9 +74,9 @@ const Footer = () => {
             <ul className="space-y-3">
               {services.map((service, index) => (
                 <li key={index}>
-                  <a href="#services" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                  <Link to="/services" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
                     {service}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -89,12 +90,12 @@ const Footer = () => {
             <ul className="space-y-3">
               {quickLinks.map((link, index) => (
                 <li key={index}>
-                  <a 
-                    href={link.href} 
+                  <Link 
+                    to={link.href} 
                     className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
                   >
                     {link.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -131,12 +132,12 @@ const Footer = () => {
               >
                 Bel Nu: +31 6 15383300
               </a>
-              <a 
-                href="#contact"
+              <Link 
+                to="/contact"
                 className="block w-full text-center border border-primary-foreground/30 text-primary-foreground py-3 px-4 rounded-lg font-semibold hover:bg-primary-foreground/10 transition-all duration-300"
               >
                 Online Offerte
-              </a>
+              </Link>
             </div>
           </div>
         </div>

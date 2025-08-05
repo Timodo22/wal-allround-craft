@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/enhanced-button";
 import { Hammer, Award, Clock } from "lucide-react";
+import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-image.jpg";
 
 const Hero = () => {
@@ -43,13 +44,17 @@ const Hero = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button variant="hero" size="hero" className="group">
-                Gratis Offerte Aanvragen
-                <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
-              </Button>
-              <Button variant="outline" size="hero">
-                Bekijk Projecten
-              </Button>
+              <Link to="/contact">
+                <Button variant="hero" size="hero" className="group">
+                  Gratis Offerte Aanvragen
+                  <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
+                </Button>
+              </Link>
+              <Link to="/projects">
+                <Button variant="outline" size="hero">
+                  Bekijk Projecten
+                </Button>
+              </Link>
             </div>
 
             {/* Contact Info */}
