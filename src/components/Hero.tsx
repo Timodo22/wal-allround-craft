@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/enhanced-button";
 import { Hammer, Award, Clock } from "lucide-react";
 import { Link } from "react-router-dom";
-import heroImage from "@/assets/hero-image.png";
+import heroImage from "@/assets/HeroPhoto.jpg";
 
 const Hero = () => {
   return (
@@ -82,7 +82,7 @@ const Hero = () => {
             {/* Floating Badge */}
             <div className="absolute -bottom-6 -left-6 bg-primary text-primary-foreground p-6 rounded-xl shadow-hover animate-float">
               <div className="text-center">
-                <div className="text-2xl font-bold">15+</div>
+                <div className="text-2xl font-bold">5+</div>
                 <div className="text-sm">Jaar ervaring</div>
               </div>
             </div>

@@ -40,8 +40,8 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email",
-      value: "info@vandewalservice.nl",
-      link: "mailto:info@vandewalservice.nl", 
+      value: "info@vandewalallroundservice.com",
+      link: "mailto:info@vandewalallroundservice.com", 
       description: "Voor offerte aanvragen"
     },
     {

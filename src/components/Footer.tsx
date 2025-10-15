@@ -37,33 +37,42 @@ const Footer = () => {
             </div>
             
             <p className="text-primary-foreground/80 leading-relaxed">
-              Professionele timmerman met meer dan 15 jaar ervaring. 
+              Professionele timmerman met meer dan 5 jaar ervaring. 
               Van maatwerk binnen tot tuinprojecten buiten - 
               vakmanschap en kwaliteit gegarandeerd.
             </p>
 
-            <div className="space-y-3">
-              <div className="flex items-center space-x-3">
-                <Phone size={16} />
-                <a href="tel:+31615383300" className="hover:text-primary-foreground transition-colors">
-                  +31 6 15383300
-                </a>
-              </div>
-              <div className="flex items-center space-x-3">
-                <Mail size={16} />
-                <a href="mailto:info@vandewalservice.nl" className="hover:text-primary-foreground transition-colors">
-                  info@vandewalservice.nl
-                </a>
-              </div>
-              <div className="flex items-center space-x-3">
-                <MapPin size={16} />
-                <span>Nederland (landelijk)</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <Clock size={16} />
-                <span>Ma-Vr: 7:00-18:00</span>
-              </div>
-            </div>
+{/* Company Info */}
+<div className="space-y-6">
+
+  <div className="space-y-3">
+    <div className="flex items-center space-x-3">
+      <Phone size={16} />
+      <a href="tel:+31615383300" className="hover:text-primary-foreground transition-colors">
+        +31 6 15383300
+      </a>
+    </div>
+    <div className="flex items-center space-x-3">
+      <Mail size={16} />
+      <a href="mailto:info@vandewalallroundservice.com" className="hover:text-primary-foreground transition-colors">
+        info@vandewalallroundservice.com
+      </a>
+    </div>
+    <div className="flex items-center space-x-3">
+      <MapPin size={16} />
+      <span>Heuveldwarsstraat 9, Moergestel 5066PA</span>
+    </div>
+    <div className="flex items-center space-x-3">
+      <Clock size={16} />
+      <span>Ma-Vr: 7:00-18:00</span>
+    </div>
+    <div className="flex items-center space-x-3">
+      <span className="font-semibold">KvK:</span>
+      <span>98555766</span>
+    </div>
+  </div>
+</div>
+
           </div>
 
           {/* Services */}
@@ -103,18 +112,18 @@ const Footer = () => {
             <div className="pt-4">
               <h5 className="font-semibold mb-3">Volg Ons</h5>
               <div className="flex space-x-4">
-                <a href="#" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
-                  <Facebook size={20} />
-                </a>
-                <a href="#" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+
+                <a href="https://www.instagram.com/vandewal_allroundservice?igsh=NDR4N2llcm5ta3l1" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
                   <Instagram size={20} />
                 </a>
-                <a href="#" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
-                  <Linkedin size={20} />
-                </a>
+
               </div>
             </div>
           </div>
+
+
+
+          
 
           {/* Call to Action */}
           <div className="space-y-6">
@@ -142,25 +151,22 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="border-t border-primary-foreground/20 mt-12 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-primary-foreground/60 text-sm">
-              © {currentYear} Van de Wal Allround Service. Alle rechten voorbehouden.
-            </p>
-            <div className="flex space-x-6 text-sm text-primary-foreground/60">
-              <a href="#" className="hover:text-primary-foreground transition-colors">
-                Privacy
-              </a>
-              <a href="#" className="hover:text-primary-foreground transition-colors">
-                Algemene Voorwaarden
-              </a>
-              <a href="#" className="hover:text-primary-foreground transition-colors">
-                Cookies
-              </a>
-            </div>
-          </div>
-        </div>
+{/* Bottom Bar */}
+<div className="border-t border-primary-foreground/20 mt-12 pt-8">
+  <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+    <p className="text-primary-foreground/60 text-sm">
+      © {currentYear} Van de Wal Allround Service. Alle rechten voorbehouden.
+    </p>
+
+
+  </div>
+
+  {/* Credits */}
+  <p className="text-center text-primary-foreground/40 text-xs mt-4">
+    Powered by <a href="https://spectux.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary-foreground transition-colors">Spectux.com</a>
+  </p>
+</div>
+
       </div>
     </footer>
   );

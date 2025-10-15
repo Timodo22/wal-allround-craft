@@ -17,11 +17,38 @@ const ContactPage = () => {
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // In een echte applicatie zou hier de form worden verzonden
-    setIsSubmitted(true);
-    setTimeout(() => setIsSubmitted(false), 5000);
+
+    const formDataToSend = {
+      access_key: "c5ab6c58-f319-42fc-8ff9-5d9feae8bc83",
+      subject: `Nieuwe offerte aanvraag van ${formData.name}`,
+      from_name: "Contactformulier Website",
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      projectType: formData.projectType,
+      message: formData.message
+    };
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json"
+      },
+      body: JSON.stringify(formDataToSend)
+    });
+
+    const result = await response.json();
+
+    if (result.success) {
+      setIsSubmitted(true);
+      setFormData({ name: "", email: "", phone: "", projectType: "", message: "" });
+      setTimeout(() => setIsSubmitted(false), 5000);
+    } else {
+      alert("Er ging iets mis bij het verzenden. Probeer het opnieuw.");
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -42,8 +69,8 @@ const ContactPage = () => {
     {
       icon: Mail,
       title: "Email",
-      value: "info@vandewalservice.nl",
-      link: "mailto:info@vandewalservice.nl", 
+      value: "info@vandewalallroundservice.com",
+      link: "mailto:info@vandewalallroundservice.com", 
       description: "Voor offerte aanvragen"
     },
     {
@@ -173,10 +200,13 @@ const ContactPage = () => {
                   <p className="text-primary-foreground/80 mb-4">
                     Voor urgente reparaties zijn wij 24/7 bereikbaar
                   </p>
-                  <Button variant="outline" size="lg" className="bg-background hover:bg-secondary">
-                    <Phone className="mr-2" size={20} />
-                    +31 6 15383300
-                  </Button>
+<a href="tel:+31615383300">
+  <Button variant="outline" size="lg" className="bg-background hover:bg-secondary">
+    <Phone className="mr-2" size={20} />
+    +31 6 15383300
+  </Button>
+</a>
+
                 </div>
               </div>
 

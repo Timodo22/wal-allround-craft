@@ -3,7 +3,7 @@ import { CheckCircle, Wrench, Home, TreePine } from "lucide-react";
 const About = () => {
   const achievements = [
     "Afgestudeerd timmerman met certificering",
-    "15+ jaar ervaring in de bouw",
+    "5+ jaar ervaring in de bouw",
     "Gespecialiseerd in maatwerk projecten",
     "Binnen én buiten werkzaamheden",
     "100% tevreden klanten"
@@ -39,7 +39,7 @@ const About = () => {
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
                 Als gedreven vakman met een grote passie voor bouw en tuinwerk, 
-                lever ik al meer dan 15 jaar hoogwaardige diensten. Mijn focus ligt op 
+                lever ik al meer dan 5 jaar hoogwaardige diensten. Mijn focus ligt op 
                 <strong className="text-primary"> perfecte afwerking, betrouwbaarheid en klanttevredenheid.</strong>
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">

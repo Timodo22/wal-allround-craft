@@ -12,10 +12,10 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "Moderne Keuken Renovatie",
+      title: "Moderne Keuken Renovatie kaas",
       category: "binnen",
       image: projectBinnen1,
-      description: "Complete keukenrenovatie met maatwerk kasten en hoogwaardige afwerking",
+      description: "Complete keukenrenovatie met maatwerk kasten en hoogwaardige afwerking van binnen super mooi",
       location: "Amsterdam",
       duration: "3 weken",
       details: "Een prachtige transformatie van een verouderde keuken naar een moderne, functionele ruimte. Inclusief maatwerk kastenwand, kookeiland en premium werkbladen."
