@@ -5,7 +5,10 @@ import heroImage from "@/assets/HeroPhoto.jpg";
 
 const Hero = () => {
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section
+  id="home"
+  className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16 sm:pt-24"
+>
       <div className="absolute inset-0 bg-gradient-subtle"></div>
       
       <div className="container mx-auto px-6 py-20 relative z-10">

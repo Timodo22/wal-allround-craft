@@ -11,21 +11,67 @@ const Contact = () => {
     email: "",
     phone: "",
     projectType: "",
-    message: ""
+    message: "",
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  // ✅ Web3Forms integratie
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // In een echte applicatie zou hier de form worden verzonden
-    setIsSubmitted(true);
-    setTimeout(() => setIsSubmitted(false), 5000);
+    setLoading(true);
+
+    const formDataToSend = {
+      access_key: "c5ab6c58-f319-42fc-8ff9-5d9feae8bc83", // ← jouw Web3Forms key
+      subject: `Nieuwe offerte aanvraag van ${formData.name}`,
+      from_name: "Contactformulier Website",
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      projectType: formData.projectType,
+      message: formData.message,
+    };
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(formDataToSend),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setIsSubmitted(true);
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          projectType: "",
+          message: "",
+        });
+      } else {
+        alert("Er ging iets mis bij het verzenden. Probeer het opnieuw.");
+      }
+    } catch (error) {
+      alert("Er trad een netwerkfout op. Controleer uw verbinding.");
+    } finally {
+      setLoading(false);
+      setTimeout(() => setIsSubmitted(false), 6000);
+    }
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
@@ -35,40 +81,41 @@ const Contact = () => {
       title: "Telefoon",
       value: "+31 6 15383300",
       link: "tel:+31615383300",
-      description: "Bel direct voor spoedklussen"
+      description: "Bel direct voor spoedklussen",
     },
     {
       icon: Mail,
       title: "Email",
       value: "info@vandewalallroundservice.com",
-      link: "mailto:info@vandewalallroundservice.com", 
-      description: "Voor offerte aanvragen"
+      link: "mailto:info@vandewalallroundservice.com",
+      description: "Voor offerte aanvragen",
     },
     {
       icon: MapPin,
       title: "Werkgebied",
       value: "Nederland",
-      description: "Landelijk actief"
+      description: "Landelijk actief",
     },
     {
       icon: Clock,
       title: "Openingstijden",
       value: "Ma-Vr: 7:00-18:00",
-      description: "Weekend op afspraak"
-    }
+      description: "Weekend op afspraak",
+    },
   ];
 
   const projectTypes = [
     "Keuken renovatie",
-    "Badkamer verbouwing", 
+    "Badkamer verbouwing",
     "Tuinhuis/Schuur",
     "Terras/Pergola",
     "Vloeren",
     "Inbouwkasten",
     "Reparaties",
-    "Anders"
+    "Anders",
   ];
 
+  // ✅ Bedankpagina na verzenden
   if (isSubmitted) {
     return (
       <section id="contact" className="py-20 bg-background">
@@ -79,13 +126,10 @@ const Contact = () => {
               Bedankt voor uw aanvraag!
             </h3>
             <p className="text-muted-foreground mb-6">
-              Wij hebben uw bericht ontvangen en nemen binnen 24 uur contact met u op 
-              voor een vrijblijvende offerte.
+              Wij hebben uw bericht ontvangen en nemen binnen 24 uur contact met
+              u op voor een vrijblijvende offerte.
             </p>
-            <Button 
-              variant="outline" 
-              onClick={() => setIsSubmitted(false)}
-            >
+            <Button variant="outline" onClick={() => setIsSubmitted(false)}>
               Nieuwe Aanvraag
             </Button>
           </Card>
@@ -103,7 +147,7 @@ const Contact = () => {
             Contact & Offerte
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Klaar om uw project te starten? Neem contact op voor een 
+            Klaar om uw project te starten? Neem contact op voor een
             <strong className="text-primary"> gratis offerte binnen 24 uur.</strong>
           </p>
         </div>
@@ -116,14 +160,14 @@ const Contact = () => {
                 Neem Direct Contact Op
               </h3>
               <p className="text-muted-foreground mb-8">
-                Heeft u vragen of wilt u direct een afspraak maken? 
-                Bel ons of stuur een bericht - wij staan altijd klaar om u te helpen.
+                Heeft u vragen of wilt u direct een afspraak maken? Bel ons of
+                stuur een bericht - wij staan altijd klaar om u te helpen.
               </p>
             </div>
 
             <div className="space-y-6">
               {contactInfo.map((info, index) => (
-                <div 
+                <div
                   key={index}
                   className="flex items-start space-x-4 p-4 bg-card rounded-lg shadow-elegant hover:shadow-hover transition-all duration-300 group"
                 >
@@ -135,7 +179,7 @@ const Contact = () => {
                       {info.title}
                     </h4>
                     {info.link ? (
-                      <a 
+                      <a
                         href={info.link}
                         className="text-lg font-medium text-foreground hover:text-primary transition-colors"
                       >
@@ -162,21 +206,35 @@ const Contact = () => {
               <p className="text-primary-foreground/80 mb-4">
                 Voor urgente reparaties zijn wij 24/7 bereikbaar
               </p>
-              <Button variant="outline" size="lg" className="bg-background hover:bg-secondary">
-                <Phone className="mr-2" size={20} />
-                +31 6 15383300
-              </Button>
+              <a href="tel:+31615383300">
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="bg-background hover:bg-secondary"
+                >
+                  <Phone className="mr-2" size={20} />
+                  +31 6 15383300
+                </Button>
+              </a>
             </div>
           </div>
 
           {/* Contact Form */}
           <div className="animate-fade-in">
             <Card className="p-8 shadow-elegant">
-              <h3 className="text-2xl font-bold text-primary mb-6">
+              <h2 className="text-2xl font-bold text-primary mb-6">
                 Vraag Een Offerte Aan
-              </h3>
-              
+              </h2>
+
               <form onSubmit={handleSubmit} className="space-y-6">
+                {/* Honeypot tegen spam */}
+                <input
+                  type="checkbox"
+                  name="botcheck"
+                  className="hidden"
+                  style={{ display: "none" }}
+                />
+
                 <div className="grid md:grid-cols-2 gap-4">
                   <div className="space-y-2">
                     <label className="text-sm font-medium text-foreground">
@@ -230,7 +288,9 @@ const Contact = () => {
                     >
                       <option value="">Selecteer type project</option>
                       {projectTypes.map((type) => (
-                        <option key={type} value={type}>{type}</option>
+                        <option key={type} value={type}>
+                          {type}
+                        </option>
                       ))}
                     </select>
                   </div>
@@ -250,10 +310,24 @@ const Contact = () => {
                   />
                 </div>
 
-                <Button type="submit" variant="hero" size="hero" className="w-full group">
-                  <Send className="mr-2" size={20} />
-                  Verstuur Aanvraag
-                  <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
+                <Button
+                  type="submit"
+                  variant="hero"
+                  size="hero"
+                  className="w-full group"
+                  disabled={loading}
+                >
+                  {loading ? (
+                    "Versturen..."
+                  ) : (
+                    <>
+                      <Send className="mr-2" size={20} />
+                      Verstuur Aanvraag
+                      <span className="ml-2 group-hover:translate-x-1 transition-transform">
+                        →
+                      </span>
+                    </>
+                  )}
                 </Button>
 
                 <p className="text-sm text-muted-foreground text-center">

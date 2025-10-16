@@ -18,7 +18,7 @@ const ServicesPage = () => {
       category: "Buiten Projecten", 
       title: "Tuin & Buitenruimte",
       description: "Van tuinhuizen tot terrassen - alles voor buiten",
-      items: ["Tuinhuizen", "Pergola's", "Schuttingen", "Terrassen", "Carports", "Buitenkeukens"]
+      items: ["Tuinhuizen", "Pergola's", "Schuttingen", "Terrassen", "Carports", "Buitenkeukens", "Bestrating"]
     },
     {
       icon: Wrench,

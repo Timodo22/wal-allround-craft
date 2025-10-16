@@ -18,7 +18,7 @@ const About = () => {
     {
       icon: TreePine,
       title: "Buiten Projecten", 
-      description: "Tuinhuizen, pergola's, schuttingen en terrassen"
+      description: "Tuinhuizen, pergola's, bestrating, schuttingen en terrassen"
     },
     {
       icon: Wrench,
@@ -35,17 +35,30 @@ const About = () => {
           <div className="space-y-8 animate-fade-in">
             <div className="space-y-4">
               <h2 className="text-4xl font-bold text-primary">
-                Over Dean van de Wal
+                Over Van de Wal Allround Service
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Als gedreven vakman met een grote passie voor bouw en tuinwerk, 
-                lever ik al meer dan 5 jaar hoogwaardige diensten. Mijn focus ligt op 
-                <strong className="text-primary"> perfecte afwerking, betrouwbaarheid en klanttevredenheid.</strong>
+                
+Welkom bij Van de Wal Allround Service – uw betrouwbare partner voor uiteenlopende klus- en onderhoudswerkzaamheden. Mijn naam is Dean van de Wal en ik ben de eigenaar van het bedrijf. Ik sta persoonlijk 
+
+                <strong className="text-primary"> garant voor kwaliteit, vakmanschap en een nuchtere, eerlijke aanpak.</strong>
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Of het nu gaat om een complete keukenrenovatie, het bouwen van een tuinhuis, 
-                of het aanleggen van een prachtig terras - elk project wordt met dezelfde 
-                zorgvuldigheid en professionaliteit uitgevoerd.
+Met 5 jaar lang ervaring in het vak ben ik gespecialiseerd in allround klussen, zowel in als rondom het huis. Denk hierbij aan kleine renovaties, timmerwerk, tuinrenovaties, bestrating, tuinaanleg en nog veel meer. Geen project is te klein of te groot – ik denk graag met u mee en bied altijd een passende oplossing op maat.
+
+              </p>
+
+                            <p className="text-lg text-muted-foreground leading-relaxed">
+                <strong className="text-primary"> Wat mij onderscheidt? </strong> 
+                  <br />
+                Ik werk nauwkeurig, houd van duidelijkheid en kom mijn afspraken na. U kunt rekenen op een persoonlijke benadering, waarbij goed overleg en tevredenheid voorop staan. Bij Van de Wal Allround Service krijgt u geen grote organisatie, maar één aanspreekpunt met hart voor het werk én oog voor detail.
+
+              </p>
+
+                                          <p className="text-lg text-muted-foreground leading-relaxed">
+          
+
+Bent u op zoek naar een vakman die met u meedenkt en het werk netjes en vakkundig uitvoert? Neem gerust contact met mij op voor een vrijblijvende kennismaking of offerte.
               </p>
             </div>
 
