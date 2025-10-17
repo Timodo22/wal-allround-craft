@@ -9,23 +9,23 @@ const ServicesPage = () => {
     {
       icon: Home,
       category: "Binnen Projecten",
-      title: "Interieur & Renovatie",
+      title: "Timmerwerk & Renovatie",
       description: "Complete binnenverbouwingen met oog voor detail",
-      items: ["Keukens op maat", "Badkamerrenovaties", "Inbouwkasten", "Vloeren", "Plafonds", "Wandbekleding"]
+      items: ["Vloeren", "Plafonds", "Wandbekleding"]
     },
     {
       icon: TreePine,
       category: "Buiten Projecten", 
-      title: "Tuin & Buitenruimte",
+      title: "Tuinaanleg & tuin renovatie",
       description: "Van tuinhuizen tot terrassen - alles voor buiten",
-      items: ["Tuinhuizen", "Pergola's", "Schuttingen", "Terrassen", "Carports", "Buitenkeukens", "Bestrating"]
+      items: ["Schuttingen", "Terrassen", "Carports","Bestrating"]
     },
     {
       icon: Wrench,
       category: "Onderhoud",
       title: "Reparatie & Onderhoud",
       description: "Snel en vakkundig onderhoud van uw eigendommen",
-      items: ["Reparaties", "Preventief onderhoud", "Dakgoot reiniging", "Schilderwerk", "Kleine verbouwingen", "Noodservice"]
+      items: ["Reparaties", "Kleine verbouwingen", "Noodservice"]
     }
   ];
 

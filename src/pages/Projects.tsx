@@ -17,6 +17,11 @@ import project6 from "@/assets/Project6.jpg"
 import project7 from "@/assets/Project7.jpg"
 import project8 from "@/assets/Project8.jpg"
 import project9 from "@/assets/Project9.jpg"
+import vloer1 from "@/assets/vloer.jpg"
+import vloer2 from "@/assets/Vloer2.jpg"
+import Dakje1 from "@/assets/Dakje.jpg"
+import Dakje2 from "@/assets/Dakje2.jpg"
+
 
 import { Link } from "react-router-dom";
 
@@ -73,8 +78,32 @@ const ProjectsPage = () => {
       images: [project8, project9],
       description:
         "Leidingen keurig weg gewerkt, klaar om gestuct te worden!",
-      location: "Rotterdam",
-      duration: "3 weken",
+      location: "Tilburg",
+      duration: "1 week",
+      details:
+        "De perfecte schaduwplek met een functionele buitenkeuken voor ultiem buitenleven.",
+    },
+        {
+      id: 5,
+      title: "Dak renovatie",
+      category: "buiten",
+      images: [Dakje1, Dakje2],
+      description:
+        "Dak renovatie, opnieuw gelegd en gemonteerd.",
+      location: "Moergestel",
+      duration: "1 week",
+      details:
+        "De perfecte schaduwplek met een functionele buitenkeuken voor ultiem buitenleven.",
+    },
+            {
+      id: 5,
+      title: "Tegelvloer gelegd",
+      category: "binnen",
+      images: [vloer1, vloer2],
+      description:
+        "Binnen tegelvloer gelegd, strak en mooi afgewerkt.",
+      location: "Moergestel",
+      duration: "1 week",
       details:
         "De perfecte schaduwplek met een functionele buitenkeuken voor ultiem buitenleven.",
     },
