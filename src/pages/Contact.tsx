@@ -88,12 +88,11 @@ const ContactPage = () => {
   ];
 
   const projectTypes = [
-    "Keuken renovatie",
     "Badkamer verbouwing", 
     "Tuinhuis/Schuur",
     "Terras/Pergola",
     "Vloeren",
-    "Inbouwkasten",
+
     "Reparaties",
     "Anders"
   ];

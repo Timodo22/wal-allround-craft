@@ -5,11 +5,9 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const services = [
-    "Keuken renovaties",
     "Badkamer verbouwingen", 
     "Tuinhuizen & Pergola's",
     "Vloeren & Plafonds",
-    "Inbouwkasten",
     "Onderhoud & Reparaties"
   ];
 
