@@ -21,8 +21,12 @@ import vloer1 from "@/assets/vloer.jpg"
 import vloer2 from "@/assets/Vloer2.jpg"
 import Dakje1 from "@/assets/Dakje.jpg"
 import Dakje2 from "@/assets/Dakje2.jpg"
-
-
+import plafond1 from "@/assets/plafond1.jpeg"
+import plafond2 from "@/assets/plafond2.jpeg"
+import plafond3 from "@/assets/plafond3.jpeg"
+import vloer3 from "@/assets/vloer3.jpeg"
+import vloer4 from "@/assets/vloer4.jpeg"
+import vloer5 from "@/assets/vloer5.jpeg"
 import { Link } from "react-router-dom";
 
 import {
@@ -39,6 +43,18 @@ const ProjectsPage = () => {
   const projects = [
     {
       id: 1,
+      title: "Vloer gerealiseerd",
+      category: "binnen",
+      images: [vloer3, vloer4, vloer5],
+      description:
+        "Een mooie & zeer nette vloer gerealiseerd! Klaar voor gebruik.",
+      location: "Moergestel",
+      duration: "1 week",
+      details:
+        "Een prachtige transformatie van een verouderde keuken naar een moderne, functionele ruimte.",
+    },
+    {
+      id: 2,
       title: "Bestrating leggen!",
       category: "buiten",
       images: [project1, project2,],
@@ -50,7 +66,7 @@ const ProjectsPage = () => {
         "Een prachtige transformatie van een verouderde keuken naar een moderne, functionele ruimte.",
     },
     {
-      id: 2,
+      id: 3,
       title: "Luxe slaapkamer makeover",
       category: "binnen",
       images: [project3, project4],
@@ -61,7 +77,7 @@ const ProjectsPage = () => {
         "Complete transformatie met focus op natuurlijke materialen en moderne functionaliteit.",
     },
     {
-      id: 3,
+      id: 4,
       title: "Montage openslaande deuren",
       category: "binnen",
       images: [project5, project6, project7],
@@ -72,7 +88,7 @@ const ProjectsPage = () => {
         "Een volledig op maat gemaakt tuinhuis met geïntegreerd terras.",
     },
     {
-      id: 4,
+      id: 5,
       title: "Wegwerking leidingen",
       category: "buiten",
       images: [project8, project9],
@@ -84,7 +100,7 @@ const ProjectsPage = () => {
         "De perfecte schaduwplek met een functionele buitenkeuken voor ultiem buitenleven.",
     },
         {
-      id: 5,
+      id: 6,
       title: "Dak renovatie",
       category: "buiten",
       images: [Dakje1, Dakje2],
@@ -96,12 +112,24 @@ const ProjectsPage = () => {
         "De perfecte schaduwplek met een functionele buitenkeuken voor ultiem buitenleven.",
     },
             {
-      id: 5,
+      id: 7,
       title: "Tegelvloer gelegd",
       category: "binnen",
       images: [vloer1, vloer2],
       description:
         "Binnen tegelvloer gelegd, strak en mooi afgewerkt.",
+      location: "Moergestel",
+      duration: "1 week",
+      details:
+        "De perfecte schaduwplek met een functionele buitenkeuken voor ultiem buitenleven.",
+    },
+            {
+      id: 8,
+      title: "Plafond renovatie",
+      category: "binnen",
+      images: [plafond1, plafond2, plafond3],
+      description:
+        "Een before & after van ons werk. Wij hebben de balk laag verstevigd, geïsoleerd, het plafond dicht gegipst & netjes de naden dicht gezet. Dit plafond is nu behangklaar!",
       location: "Moergestel",
       duration: "1 week",
       details:
