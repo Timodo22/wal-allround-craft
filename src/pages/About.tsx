@@ -15,7 +15,7 @@ const AboutPage = () => {
     {
       icon: Home,
       title: "Binnen Projecten",
-      description: "Keukens, badkamers, inbouwkasten, vloeren en meer"
+      description: "Timmerwerk, kleine/grote verbouwingen. Alles naar uw wens.   "
     },
     {
       icon: TreePine,

@@ -45,7 +45,7 @@ const ProjectsPage = () => {
       id: 1,
       title: "Vloer gerealiseerd",
       category: "binnen",
-      images: [vloer3, vloer4, vloer5],
+      images: [vloer5, vloer3, vloer4],
       description:
         "Een mooie & zeer nette vloer gerealiseerd! Klaar voor gebruik.",
       location: "Moergestel",
@@ -57,7 +57,7 @@ const ProjectsPage = () => {
       id: 2,
       title: "Bestrating leggen!",
       category: "buiten",
-      images: [project1, project2,],
+      images: [project2, project1,],
       description:
         "Complete bestrating voor de klant, vanaf 0 opgebouwd ",
       location: "Moergestel",
@@ -69,7 +69,7 @@ const ProjectsPage = () => {
       id: 3,
       title: "Luxe slaapkamer makeover",
       category: "binnen",
-      images: [project3, project4],
+      images: [project4, project3],
       description: "Mooie akoestische panelen, voor een slaapkamer makeover!",
       location: "Tilburg",
       duration: "2 weken",
@@ -83,7 +83,7 @@ const ProjectsPage = () => {
       images: [project5, project6, project7],
       description: "Keurig maatwerk geleverd voor de klant. Een luxe en ruime doorgang",
       location: "Tilburg",
-      duration: "1 week",
+      duration: "1 dag",
       details:
         "Een volledig op maat gemaakt tuinhuis met geïntegreerd terras.",
     },
@@ -95,7 +95,7 @@ const ProjectsPage = () => {
       description:
         "Leidingen keurig weg gewerkt, klaar om gestuct te worden!",
       location: "Tilburg",
-      duration: "1 week",
+      duration: "1 dag",
       details:
         "De perfecte schaduwplek met een functionele buitenkeuken voor ultiem buitenleven.",
     },
@@ -103,11 +103,11 @@ const ProjectsPage = () => {
       id: 6,
       title: "Dak renovatie",
       category: "buiten",
-      images: [Dakje1, Dakje2],
+      images: [Dakje2, Dakje1],
       description:
         "Dak renovatie, opnieuw gelegd en gemonteerd.",
       location: "Moergestel",
-      duration: "1 week",
+      duration: "1 dag",
       details:
         "De perfecte schaduwplek met een functionele buitenkeuken voor ultiem buitenleven.",
     },
@@ -119,7 +119,7 @@ const ProjectsPage = () => {
       description:
         "Binnen tegelvloer gelegd, strak en mooi afgewerkt.",
       location: "Moergestel",
-      duration: "1 week",
+      duration: "1 dag",
       details:
         "De perfecte schaduwplek met een functionele buitenkeuken voor ultiem buitenleven.",
     },
@@ -127,7 +127,7 @@ const ProjectsPage = () => {
       id: 8,
       title: "Plafond renovatie",
       category: "binnen",
-      images: [plafond1, plafond2, plafond3],
+      images: [plafond3, plafond2, plafond1],
       description:
         "Een before & after van ons werk. Wij hebben de balk laag verstevigd, geïsoleerd, het plafond dicht gegipst & netjes de naden dicht gezet. Dit plafond is nu behangklaar!",
       location: "Moergestel",
