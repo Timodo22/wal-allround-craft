@@ -8,6 +8,16 @@ const Recensie = () => {
       rating: 5,
       image: "/src/assets/recensie1.jpeg" // <-- Voeg hier je afbeelding toe
     },
+        {
+      name: "John",
+      text: "aardige en vakkundige mensen komen afspraken na snel en goed werk geleverd laminaat laten leggen na afspraak lag het er 4 dagen later al netjes in. ook electrisch  snel en netjes gedaan mijn volgende klusjes zijn voor vd wal",
+      rating: 5,// <-- Voeg hier je afbeelding toe
+    },
+            {
+      name: "Rik de Pina",
+      text: "Fijne betrokken kerel die graag meters maken. Ook als de klus wat tegen zit, geven ze niet op!",
+      rating: 5,// <-- Voeg hier je afbeelding toe
+    },
   ];
 
   return (
