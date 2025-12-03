@@ -80,7 +80,7 @@ const ProjectsPage = () => {
       id: 4,
       title: "Montage openslaande deuren",
       category: "binnen",
-      images: [project5, project6, project7],
+      images:  [ project6, project5,  project7],
       description: "Keurig maatwerk geleverd voor de klant. Een luxe en ruime doorgang",
       location: "Tilburg",
       duration: "1 dag",
@@ -127,7 +127,7 @@ const ProjectsPage = () => {
       id: 8,
       title: "Plafond renovatie",
       category: "binnen",
-      images: [plafond3, plafond2, plafond1],
+      images: [plafond2, plafond3, plafond2, plafond1],
       description:
         "Een before & after van ons werk. Wij hebben de balk laag verstevigd, geïsoleerd, het plafond dicht gegipst & netjes de naden dicht gezet. Dit plafond is nu behangklaar!",
       location: "Moergestel",
