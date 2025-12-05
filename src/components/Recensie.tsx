@@ -14,6 +14,11 @@ const Recensie = () => {
       rating: 5,// <-- Voeg hier je afbeelding toe
     },
             {
+      name: "Henk S",
+      text: "Dean en collega vandaag nieuw dak op het tuinschuurtje gelegd. Netjes gewerkt, ziet er weer strak uit",
+      rating: 5,// <-- Voeg hier je afbeelding toe
+    },
+                {
       name: "Rik de Pina",
       text: "Fijne betrokken kerel die graag meters maken. Ook als de klus wat tegen zit, geven ze niet op!",
       rating: 5,// <-- Voeg hier je afbeelding toe
